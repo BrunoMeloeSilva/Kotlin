@@ -5,4 +5,10 @@ fun main(){
     println(titular)
     //String template
     println("titular $titular")
+    //Variavel
+    var variavelA = "Bruno"
+    println(variavelA)
+    //Varialvel declarando tipo explicitamente
+    var varialvelB: String = "Maria"
+    println(varialvelB)
 }
