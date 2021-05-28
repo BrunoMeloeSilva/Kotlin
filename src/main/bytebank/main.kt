@@ -6,6 +6,14 @@ fun main(){
     println()
     //Objetos
     testaObjetos()
+    //Teste Objetos
+    val conta = Conta()
+    deposita(conta, 100.32)
+    println(conta.saldo)
+}
+
+fun deposita(conta: Conta, valor: Double){
+    conta.saldo += valor;
 }
 
 class Conta {
