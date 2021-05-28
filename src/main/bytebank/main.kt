@@ -10,7 +10,7 @@ fun main() {
     val conta = Conta()
     conta.deposita(100.32)
     println(conta.getSaldo())
-    conta.numero = 1
+
 }
 
 class Conta {
@@ -20,6 +20,12 @@ class Conta {
         private set(value) {
             field = value
         }
+
+    constructor()
+    constructor(titular: String, saldo: Double){
+        this.titular = titular
+        this.saldo = saldo
+    }
 
 
     private var saldo = 0.0
