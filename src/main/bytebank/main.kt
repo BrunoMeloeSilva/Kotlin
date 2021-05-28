@@ -5,12 +5,7 @@ fun main(){
     testaLoops()
     println()
     //Objetos
-    val contaBruno = Conta()
-    contaBruno.titular = "Bruno Silva"
-    println(contaBruno.titular)
-    val contaMaria = Conta()
-    contaMaria.titular = "Maria Silva"
-    println(contaMaria.titular)
+    testaObjetos()
 }
 
 class Conta {
@@ -19,6 +14,14 @@ class Conta {
     var saldo = 0.0
 }
 
+fun testaObjetos(){
+    val contaBruno = Conta()
+    contaBruno.titular = "Bruno Silva"
+    println(contaBruno.titular)
+    val contaMaria = Conta()
+    contaMaria.titular = "Maria Silva"
+    println("Titular da conta é ${contaMaria.titular}")
+}
 fun constantesVariaveis() {
     print("Bem vindo ao ByteBank !\n")
     //constante
