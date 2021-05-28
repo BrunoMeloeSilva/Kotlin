@@ -15,6 +15,12 @@ fun main() {
 class Conta {
     var titular = ""
     var numero = 0
+        get() { return field }
+        set(value) {
+            field = value
+        }
+
+
     private var saldo = 0.0
 
     fun getSaldo(): Double {
