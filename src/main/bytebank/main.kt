@@ -1,4 +1,25 @@
 fun main(){
+    constantesVariaveis()
+    //chamando funcao
+    testaCondicoesIF()
+    testaLoops()
+    println()
+    //Objetos
+    val contaBruno = Conta()
+    contaBruno.titular = "Bruno Silva"
+    println(contaBruno.titular)
+    val contaMaria = Conta()
+    contaMaria.titular = "Maria Silva"
+    println(contaMaria.titular)
+}
+
+class Conta {
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+}
+
+fun constantesVariaveis() {
     print("Bem vindo ao ByteBank !\n")
     //constante
     val titular = 10
@@ -11,33 +32,6 @@ fun main(){
     //Varialvel declarando tipo explicitamente
     var varialvelB: String = "Maria"
     println(varialvelB)
-
-    //chamando funcao
-    testaCondicoesIF()
-
-    //Loop N vezes determinada
-    for (i in 1..3) {
-        print(" $i")
-    }
-
-    //Loop N vezes determinada, de trás pra frente
-    println()
-    for (i in 3 downTo 1) {
-        print(" $i")
-    }
-
-    //Loop N vezes determinada, de trás pra frente, pulando de 2 em 2
-    println()
-    for (i in 6 downTo 1 step 2) {
-        print(" $i")
-    }
-
-    //Loop N vezes determinada, pode-se usar: break ou continue
-    println()
-    for (i in 1..3) {
-        print(" $i")
-        break
-    }
 }
 
 fun testaCondicoesIF() {
@@ -63,5 +57,31 @@ fun testaCondicoesIF() {
         else -> {
             println("Negativa")
         }
+    }
+}
+
+fun testaLoops() {
+    //Loop N vezes determinada
+    for (i in 1..3) {
+        print(" $i")
+    }
+
+    //Loop N vezes determinada, de trás pra frente
+    println()
+    for (i in 3 downTo 1) {
+        print(" $i")
+    }
+
+    //Loop N vezes determinada, de trás pra frente, pulando de 2 em 2
+    println()
+    for (i in 6 downTo 1 step 2) {
+        print(" $i")
+    }
+
+    //Loop N vezes determinada, pode-se usar: break ou continue
+    println()
+    for (i in 1..3) {
+        print(" $i")
+        break
     }
 }
