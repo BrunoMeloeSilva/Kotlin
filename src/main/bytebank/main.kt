@@ -2,11 +2,12 @@ fun main() {
     //Teste Objetos
     val conta = Conta("Bruno Silva", 120.32)
     conta.deposita(100.32)
+    println(conta.saldo)
 
 
 }
 
-class Conta(var titular: String, var saldo: Double) {
+class Conta(var titular: String, var saldo: Double = 0.0) {
     var numero = 0
         get() { return field }
         private set(value) {
