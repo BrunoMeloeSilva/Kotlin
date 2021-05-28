@@ -1,4 +1,4 @@
-fun main(){
+fun main() {
     constantesVariaveis()
     //chamando funcao
     testaCondicoesIF()
@@ -8,7 +8,7 @@ fun main(){
     testaObjetos()
     //Teste Objetos
     val conta = Conta()
-    conta.deposita(conta, 100.32)
+    conta.deposita(100.32)
     println(conta.saldo)
 }
 
@@ -17,12 +17,26 @@ class Conta {
     var numero = 0
     var saldo = 0.0
 
-    fun deposita(conta: Conta, valor: Double){
-        conta.saldo += valor;
+    fun deposita(valor: Double) {
+        saldo += valor;
+    }
+
+    fun saca(valor: Double) {
+        saldo -= valor
+    }
+
+    fun transfere(valor: Double, destino: Conta): Boolean {
+        if (saldo >= valor) {
+            saldo -= valor
+            destino.saldo += valor
+            return true
+        }
+        return false
+
     }
 }
 
-fun testaObjetos(){
+fun testaObjetos() {
     val contaBruno = Conta()
     contaBruno.titular = "Bruno Silva"
     println(contaBruno.titular)
@@ -30,6 +44,7 @@ fun testaObjetos(){
     contaMaria.titular = "Maria Silva"
     println("Titular da conta é ${contaMaria.titular}")
 }
+
 fun constantesVariaveis() {
     print("Bem vindo ao ByteBank !\n")
     //constante
@@ -49,11 +64,11 @@ fun testaCondicoesIF() {
     //IF..igual ao Java
     var saldo = -1
 
-    if (saldo > 0){
+    if (saldo > 0) {
         println("Maior que zero")
-    } else if (saldo == 0){
+    } else if (saldo == 0) {
         println("Igual a zero")
-    } else{
+    } else {
         println("Negativa")
     }
 
