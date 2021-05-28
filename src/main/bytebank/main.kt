@@ -9,13 +9,17 @@ fun main() {
     //Teste Objetos
     val conta = Conta()
     conta.deposita(100.32)
-    println(conta.saldo)
+    println(conta.getSaldo())
 }
 
 class Conta {
     var titular = ""
     var numero = 0
-    var saldo = 0.0
+    private var saldo = 0.0
+
+    fun getSaldo(): Double {
+        return saldo
+    }
 
     fun deposita(valor: Double) {
         saldo += valor;
