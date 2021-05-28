@@ -8,18 +8,18 @@ fun main(){
     testaObjetos()
     //Teste Objetos
     val conta = Conta()
-    deposita(conta, 100.32)
+    conta.deposita(conta, 100.32)
     println(conta.saldo)
-}
-
-fun deposita(conta: Conta, valor: Double){
-    conta.saldo += valor;
 }
 
 class Conta {
     var titular = ""
     var numero = 0
     var saldo = 0.0
+
+    fun deposita(conta: Conta, valor: Double){
+        conta.saldo += valor;
+    }
 }
 
 fun testaObjetos(){
