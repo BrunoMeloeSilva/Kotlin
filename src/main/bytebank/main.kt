@@ -10,13 +10,14 @@ fun main() {
     val conta = Conta()
     conta.deposita(100.32)
     println(conta.getSaldo())
+    conta.numero = 1
 }
 
 class Conta {
     var titular = ""
     var numero = 0
         get() { return field }
-        set(value) {
+        private set(value) {
             field = value
         }
 
