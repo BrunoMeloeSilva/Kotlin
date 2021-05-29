@@ -5,8 +5,4 @@ class CalculadoraBonificacao {
     fun registra(funcionario: Funcionario){
         this.total += funcionario.bonificacao()
     }
-
-    fun registra(gerente: Gerente){
-        this.total += gerente.bonificacao()
-    }
 }
