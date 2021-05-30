@@ -5,6 +5,9 @@ class Gerente(
     salario: Double
 ) : Funcionario(nome, cpf, salario), Autenticavel {
 
+    init {
+        println("Init Gerente")
+    }
     override fun autentica(senha: Int): Boolean {
         this.senha = senha
         return true
