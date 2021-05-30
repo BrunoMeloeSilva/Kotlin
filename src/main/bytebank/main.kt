@@ -1,6 +1,17 @@
-
+//Objetos criados desta forma são singonton
+object Singonton{
+    var total = 0
+}
 
 fun main() {
+    //É um Singonton, será instaciado uma vez só.
+    var o1 = Singonton
+    o1.total += 1
+    var o2 = Singonton
+    o2.total += 1
+    println(o1.total)
+    println(o2.total)
+
     var bruno = Gerente(123, "Bruno Silva", "11122233343", 80000.00)
     println("O funcionário ${bruno.nome} de cpf ${bruno.cpf}, tem o salário ${bruno.salario}")
 
